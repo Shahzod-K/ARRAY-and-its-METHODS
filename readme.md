@@ -121,3 +121,53 @@ let arr=['hallo','worlds','how','how you doin']
 let fil=arr.filter((el)=>el.length>5)
 console.log(fil) // ['worlds','how you doin']
 ```
+## reduce()
+### reduce method takes two //////// :
+1. callback which takes two ////////
+   1. accumulator 'starting with first index [0]'
+   2. currentValue 'starting with second index [1]'
+2. ///////////
+```js
+let arr=[1,2,3,4,5]
+let sum=arr.reduce((acc,cur)=>acc+cur,0)
+console.log(sum) // 15
+```
+## toSorted()
+### toSorted method puts elements in ascending order
+```js
+let a=[3,5,2,1,4]
+let reva=a.toSorted()
+console.log(reva) // [1,2,3,4,5]
+console.log(a) // [3,5,2,1,4]
+
+let b=['d','a','e','c','b']
+let revb=b.toSorted()
+console.log(revb) // ['a','b','c','d','e']
+console.log(b) // ['d','a','e','c','b']
+```
+# Mechanism
+## Destructuring
+### Destructuring mechanism can give values to variables from array or objects
+```js
+let a,b,rest
+[a, b, ...rest]=[5,10,23,4,67,8]
+console.log(a) // 5
+console.log(b) // 10
+console.log(rest) // [23,4.67.8]
+```
+## spread
+### spread mechanism allows copy (japs) from other variables
+```js
+let a=[1,2,3,4,5]
+let b=[...a]
+console.log(b) // [1,2,3,4,5]
+```
+## rest 
+### rest mechanism allows to enter infinit values into array
+```js
+function inf(a, ...b){
+    console.log(a) // 1
+    console.log(b) // [2,3,4,5]<=in array
+}
+console.log(inf(1,2,3,4,5))
+```
